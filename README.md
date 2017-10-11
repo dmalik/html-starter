@@ -3,7 +3,7 @@
 Get started by running these 3 commands:
 
 - Create a folder and go into it by running `mkdir my.project && cd $_`
-- Clone the repo by running `git clone this .`. (The dot at the end tells git not to generate a folder and just place the content in the folder it's in.)
+- Clone the repo by running `git clone https://github.quarry.com/Development/dm.ideal.landingpage.starter.git .`. (The dot at the end tells git not to generate a folder and just place the content in the folder it's in.)
 - Run `npm i` to install all dependencies
 
 ## NPM Scripts
