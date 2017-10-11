@@ -1,0 +1,75 @@
+@import 'reset-css/reset.css';
+@import 'normalize.css/normalize.css';
+@import './variables';
+
+/****************************/
+/*Lost grid settings - start*/
+/****************************/
+// Read docs here - http://lostgrid.org/docs.html
+
+@lost gutter 1rem;
+@lost flexbox flex; //Comment this out to revert to no flexbox
+
+//Comment this out to remove the helper grid
+* {
+  lost-utility: edit;
+}
+/**************************/
+/*Lost grid settings - end*/
+/**************************/
+
+/********************************/
+/*Global element styles - start */
+/********************************/
+
+html{
+  font-size: 16px; //Set base size for our rem units
+}
+
+h1 {
+  color: $blue;
+}
+
+.container {
+  lost-center: 80rem; // 80 * 16 = 1280 - How big the container is centered on the page.
+  padding-left:1rem;
+  padding-right: 1rem;
+  @media (min-width: $tablet) {
+    padding-left:2rem;
+    padding-right: 2rem;
+  }
+}
+/******************************/
+/*Global element styles - end */
+/******************************/
+
+/*********************************/
+/*Section element styles - start */
+/*********************************/
+
+/*============================*/
+/*section-main styles - start */
+/*============================*/
+#section-main {
+  div{
+    lost-column: 1/1;
+    @media (min-width: $desktop) {
+      &:first-child {
+        lost-column: 1/3;
+      }
+      &:last-child {
+        lost-column: 2/3;
+      }
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+}
+/*============================*/
+/*section-main styles - end */
+/*============================*/
+
+/*******************************/
+/*Section element styles - end */
+/*******************************/
